@@ -44,8 +44,8 @@ var emptyNewRow = "<tr class='trNewRow'>";
 emptyNewRow = emptyNewRow + "    <td class='task-list'>";
 emptyNewRow = emptyNewRow + "        <input type='text' class='taskList' placeholder='Enter Task'/>";
 emptyNewRow = emptyNewRow + "    </td>";
-emptyNewRow = emptyNewRow + "    <td class='task-points'>";
-emptyNewRow = emptyNewRow + "        <input type='text' class='taskPoints' placeholder='Enter Points'/>";
+emptyNewRow = emptyNewRow + "    <td class='task-ctg'>";
+emptyNewRow = emptyNewRow + "        <input type='text' class='taskCategory' placeholder='Enter Category'/>";
 emptyNewRow = emptyNewRow + "    </td>";
 emptyNewRow = emptyNewRow + "    <td class='task-status'>";
 emptyNewRow = emptyNewRow + "        <button class='save-btn'> Save</button>";
@@ -71,8 +71,8 @@ $(document).ready(function() {
     $('#taskTable').on('click', '.save-btn', function() {
         const list = $(this).parent().parent().find(".taskList").val();
         $(this).parent().parent().find(".task-list").html("" + list + "");
-        const points = $(this).parent().parent().find(".taskPoints").val();
-        $(this).parent().parent().find(".task-points").html("" + points);
+        const category = $(this).parent().parent().find(".taskCategory").val();
+        $(this).parent().parent().find(".task-ctg").html("" + category);
         $(this).parent().parent().find(".task-status").html(rowButtons);
     });
     $('#taskTable').on('click', '.cancel-btn', function() { // registering function for delete button  
@@ -90,9 +90,9 @@ $(document).ready(function() {
         $(this).parent().parent().find(".task-list").html("<input type='text' value='" + list + "' class='taskList' placeholder='Enter Task'/>");
 
 
-        const points = $(this).parent().parent().find(".task-points").html();
+        const category = $(this).parent().parent().find(".task-ctg").html();
 
-        $(this).parent().parent().find(".taskPoints").html("<input type='text' value='" + points + "' class='taskPoints' placeholder='Enter Points'/>");
+        $(this).parent().parent().find(".taskCategory").html("<input type='text' value='" + category + "' class='taskCategory' placeholder='Enter Category'/>");
 
         $(this).parent().parent().find(".task-status").html(rowUpdateButtons);
     });

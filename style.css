@@ -648,6 +648,15 @@ body {
     color: var(--white);
 }
 
+.taskList {
+    border-radius: 5px;
+    margin-left: -10px;
+}
+
+.taskPoints {
+    border-radius: 5px;
+}
+
 
 /*=======Leaderboard HTML=========*/
 
