@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -685,8 +686,8 @@ body {
 .aboutCard {
     position: relative;
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 50px;
+    padding-right: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-evenly;
@@ -695,14 +696,15 @@ body {
     margin: 50px 0;
 }
 
-.aboutCard .about_card {
+.aboutCard .about_card1 {
     position: relative;
-    width: 300px;
-    height: 300px;
-    background: #a2d9ce;
+    width: 250px;
+    height: 250px;
+    background: var(--black2);
     padding: 30px;
     border-radius: 20px;
     display: flex;
+    text-align: center;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -711,144 +713,86 @@ body {
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);
 }
 
-.about_card img {
-    width: 100px;
-    height: 100px;
-    bottom: -60px;
-    left: calc(50% - 60px);
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px #fff;
+.about_card1 img {
+    width: 250px;
+    height: auto;
 }
 
-.about_card .about_content {
+.about_card1 .cover {
+    position: absolute;
     width: 100%;
-    height: calc(480px - 160px);
-    padding: 0;
-    margin-top: 10px;
-    text-align: center;
+    height: 100%;
+    background: #000000af;
+    bottom: -350px;
+    transition: .4s;
 }
 
-.about-icons {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 3px 0;
+.about_card1:hover .cover {
+    bottom: 0;
+}
+
+.about_card1 h3 {
+    color: #f0f0f0;
+    transition-delay: .6s;
+}
+
+.about_card1 p {
+    color: #c5c5c5;
+    font-style: italic;
+    font-weight: 600;
+    transition-delay: .8s;
+}
+
+.about_card1 hr {
+    width: 70%;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition-delay: 1s;
+}
+
+.about_card1 .about-icons {
+    transition-delay: 1.2s;
 }
 
 .about-icons a {
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    line-height: 36px;
-    border-radius: 50%;
+    text-decoration: none;
+}
+
+.about_card1 .about-icons ion-icon {
+    cursor: pointer;
+    color: #c5c5c5;
+    font-size: 24px;
+    margin: 0 8px;
+    transition: all .4s;
+}
+
+.about_card1 .about-icons ion-icon:hover {
     color: var(--blue);
-    font-size: 1.2rem;
-    transition: .3s;
 }
 
-.contact_btn {
-    width: 200px;
-    margin: 15px auto;
-    padding: 5px 0;
-    font-size: 18px;
-    text-transform: uppercase;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    background: #d400ff;
-    color: #fff;
-}
-
-.leftBtn,
-.rightBtn {
-    position: absolute;
-    font-size: 1.6rem;
-    color: #000;
-    bottom: 10px;
-    z-index: 2;
-    transition: all .3s ease;
-    opacity: 1;
-}
-
-.leftBtn {
-    left: 10px;
-}
-
-.rightBtn {
-    right: 10px;
-}
-
-.left-card,
-.right-card {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border-radius: 10px;
-    transition: all .6s ease 0s;
-    overflow: hidden;
-}
-
-.left-card {
-    background: #ff00bf;
-    transform: rotate(-135deg);
-    transform-origin: 80px 300px;
-}
-
-.right-card {
-    background: #d400ff;
-    transform: rotate(135deg);
-    transform-origin: 220px 300px;
-}
-
-.text {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 15px;
-    color: #fff;
-    transition: all .6s ease;
-    z-index: 2;
-    top: 50px;
+.about_card1 h3,
+.about_card1 p,
+.about_card1 hr,
+.about_card1 .about-icons {
     opacity: 0;
+    transform: translateY(260px);
+    transition-duration: .4s;
 }
 
-.left-card,
-.right-card p {
-    padding: 20px;
-}
-
-.left .left-card {
-    transform: rotate(0deg);
-    z-index: 1;
-}
-
-.left .left-card .text {
+.about_card1:hover h3,
+.about_card1:hover p {
     opacity: 1;
-    top: 0;
-    transition-delay: .3s;
+    transform: translateY(115px);
 }
 
-.left .rightBtn {
-    z-index: -1;
-}
-
-.right .right-card {
-    transform: rotate(0deg);
-    z-index: 1;
-}
-
-.right .right-card .text {
+.about_card1:hover hr {
     opacity: 1;
-    top: 0;
-    transition-delay: .3s;
+    transform: translateY(135px);
 }
 
-.right .leftBtn {
-    z-index: -1;
+.about_card1:hover .about-icons {
+    opacity: 1;
+    transform: translateY(160px);
 }
 
 
