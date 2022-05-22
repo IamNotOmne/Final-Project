@@ -2,21 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UnseenTask</title>
-    <link rel="icon" href="img/Icon_logo.png">
+    <link rel="icon" href="img/Icon_logo.png" />
     <!-- <link rel="stylesheet" type="text/css" href="settings.css"> -->
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="login.css">
-
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="login.css" />
 </head>
 
 <body>
     <div class="logo">
-        <img src="img/LOGO.png" alt="UNseen">
+        <img src="img/LOGO.png" alt="UNseen" />
     </div>
     <div class="container">
         <div class="forms">
@@ -25,47 +24,77 @@
 
                 <form action="#">
                     <div class="input-field">
-                        <input id="username" type="text" placeholder="Email Address" required>
+                        <input id="username" type="text" placeholder="Email Address" required />
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">
-                        <input id="password" type="password" class="password" placeholder="Password" required>
+                        <input id="password" type="password" class="password" placeholder="Password" required />
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
 
                     <div class="checkbox-text">
                         <div class="checkbox-content">
-                            <input type="checkbox" id="logCheck">
+                            <input type="checkbox" id="logCheck" />
                             <label for="logCheck" class="text">Remember me</label>
                         </div>
                     </div>
 
                     <div class="input-field button">
-                        <input class="log-sub" type="button" onclick=" validate()" value="LOG IN" id="submit">
+                        <input class="log-sub" type="button" onclick=" validate()" value="LOG IN" id="submit" />
                     </div>
                 </form>
                 <div class="login-signup">
-                    <span class="text">Alrights Reserved 2022</span><br>
+                    <span class="text">Alrights Reserved 2022</span><br />
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 <script>
+    const container = document.querySelector(".container"),
+        pwShowHide = document.querySelectorAll(".showHidePw"),
+        pwFields = document.querySelectorAll(".password");
+
+    //to show/hide password and change icon
+    pwShowHide.forEach((eyeIcon) => {
+        eyeIcon.addEventListener("click", () => {
+            pwFields.forEach((pwField) => {
+                if (pwField.type === "password") {
+                    pwField.type = "text";
+
+                    pwShowHide.forEach((icon) => {
+                        icon.classList.replace("uil-eye-slash", "uil-eye");
+                    });
+                } else {
+                    pwField.type = "password";
+
+                    pwShowHide.forEach((icon) => {
+                        icon.classList.replace("uil-eye", "uil-eye-slash");
+                    });
+                }
+            });
+        });
+    });
+
     var attempt = 3; // Variable to count number of attempts.
     // Below function Executes on click of login button.
     function validate() {
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
         //if the user is a student
-        if (username == "student" && password == "password") {
+        if (
+            username == "student@passerellesnumeriques.org" &&
+            password == "password"
+        ) {
             alert("Login successfully");
             window.location = "index.html"; // Redirecting to other page.
             return false;
             //if the user is an admin
-        } else if (username == "admin" && password == "@dm1n") {
+        } else if (
+            username == "admin@passerellesnumeriques.org" &&
+            password == "@dm1n"
+        ) {
             alert("Login successfully");
             window.location = "admin.html"; // Redirecting to other page.
             return false;

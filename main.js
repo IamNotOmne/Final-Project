@@ -31,7 +31,7 @@ function linkclick(cityName, elmnt, color) {
     elmnt.style.backgroundColor = color;
 
 }
-// document.getElementById("defaultOpen").click();
+document.getElementById("defaultOpen").click();
 
 function menuToggle() {
     const toggleMenu = document.querySelector('.userMenu');
@@ -97,9 +97,3 @@ $(document).ready(function() {
         $(this).parent().parent().find(".task-status").html(rowUpdateButtons);
     });
 });
-/*======== For the about us page ========== */
-// const clc = document.querySelectorAll(".about-cancel");
-// const arr = document.querySelectorAll(".arr_container");
-// arr.addEventListener("click", () => {
-//     console.log("clicked");
-// });
