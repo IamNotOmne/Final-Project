@@ -38,14 +38,14 @@ function menuToggle() {
     toggleMenu.classList.toggle('active')
 }
 
-/*================== For the To Do Task Card ============================ */
+/*================== For the Consequence Card ============================ */
 var emptyRow = "<tr><td  class='newTable'> No Records Available</td></tr>";
 var emptyNewRow = "<tr class='trNewRow'>";
 emptyNewRow = emptyNewRow + "    <td class='task-list'>";
-emptyNewRow = emptyNewRow + "        <input type='text' class='taskList' placeholder='Enter Task'/>";
+emptyNewRow = emptyNewRow + "        <input type='text' class='taskList' placeholder='Enter Name'/>";
 emptyNewRow = emptyNewRow + "    </td>";
-emptyNewRow = emptyNewRow + "    <td class='task-ctg'>";
-emptyNewRow = emptyNewRow + "        <input type='text' class='taskCategory' placeholder='Enter Category'/>";
+emptyNewRow = emptyNewRow + "    <td class='task-type'>";
+emptyNewRow = emptyNewRow + "        <input type='text' class='taskType' placeholder='Enter Type'/>";
 emptyNewRow = emptyNewRow + "    </td>";
 emptyNewRow = emptyNewRow + "    <td class='task-status'>";
 emptyNewRow = emptyNewRow + "        <button class='save-btn'> Save</button>";
@@ -71,8 +71,8 @@ $(document).ready(function() {
     $('#taskTable').on('click', '.save-btn', function() {
         const list = $(this).parent().parent().find(".taskList").val();
         $(this).parent().parent().find(".task-list").html("" + list + "");
-        const category = $(this).parent().parent().find(".taskCategory").val();
-        $(this).parent().parent().find(".task-ctg").html("" + category);
+        const type = $(this).parent().parent().find(".taskType").val();
+        $(this).parent().parent().find(".task-type").html("" + type);
         $(this).parent().parent().find(".task-status").html(rowButtons);
     });
     $('#taskTable').on('click', '.cancel-btn', function() { // registering function for delete button  
@@ -86,13 +86,10 @@ $(document).ready(function() {
     });
     $('#taskTable').on('click', '.edit-btn', function() {
         const list = $(this).parent().parent().find(".task-list").html();
-
         $(this).parent().parent().find(".task-list").html("<input type='text' value='" + list + "' class='taskList' placeholder='Enter Task'/>");
 
-
-        const category = $(this).parent().parent().find(".task-ctg").html();
-
-        $(this).parent().parent().find(".taskCategory").html("<input type='text' value='" + category + "' class='taskCategory' placeholder='Enter Category'/>");
+        const type = $(this).parent().parent().find(".task-type").html();
+        $(this).parent().parent().find(".task-type").html("<input type='text' value='" + type + "' class='taskType' placeholder='Enter Type'/>");
 
         $(this).parent().parent().find(".task-status").html(rowUpdateButtons);
     });

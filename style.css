@@ -196,8 +196,8 @@
         }
         
         .icons-size {
-            color: #333;
-            font-size: 14px;
+            color: var(--white);
+            font-size: 13px;
         }
         
         .action {
@@ -276,8 +276,8 @@
         
         .action .userMenu ul li a {
             display: inline-block;
-            color: #555;
-            font-size: 14px;
+            color: var(--white);
+            font-size: 13px;
             font-weight: 600;
             padding-left: 15px;
             text-decoration: none;
@@ -291,7 +291,7 @@
         }
         
         .action .userMenu ul li:hover a {
-            color: var(--white);
+            color: var(--black2);
         }
         
         .cardBox {
@@ -635,10 +635,6 @@
         .taskList {
             border-radius: 5px;
             margin-left: -10px;
-        }
-        
-        .taskPoints {
-            border-radius: 5px;
         }
         /*========Team HTML*/
         
