@@ -291,7 +291,7 @@
         }
         
         .action .userMenu ul li:hover a {
-            color: var(--black2);
+            color: var(--black1);
         }
         
         .cardBox {
@@ -422,11 +422,6 @@
             border-bottom: none;
         }
         
-        .details .bigBox table tbody tr:hover {
-            background: var(--blue);
-            color: var(--white);
-        }
-        
         .details .bigBox table tr td {
             padding: 10px;
         }
@@ -436,12 +431,51 @@
         }
         
         .details .bigBox table tr td:nth-child(2) {
-            text-align: end;
+            text-align: none;
         }
         
         .details .bigBox table tr td:nth-child(3) {
             text-align: end;
         }
+        /*====Week Task card====*/
+        
+        .tasking h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-family: ' Gothic';
+            font-size: 32px;
+        }
+        
+        .tasking .taskToDo h3 {
+            padding: 20px;
+            font-family: roboto-light;
+            color: var(--black2);
+        }
+        
+        .tasking h5 i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--black2);
+        }
+        
+        .tasking ol li {
+            display: list-item;
+            list-style-position: inside;
+            font-family: roboto-light;
+            color: var(--black2);
+            text-align: justify;
+            margin-left: 3rem;
+        }
+        
+        .tasking .taskreminder {
+            padding: 30px;
+            text-align: justify;
+            color: var(--black2);
+        }
+        /*=== =====*/
         
         .status.approved {
             padding: 4px 4px;
@@ -633,8 +667,17 @@
         }
         
         .taskList {
-            border-radius: 5px;
+            height: 30px;
+            border-radius: 10px;
             margin-left: -10px;
+            border-color: var(--blue);
+        }
+        
+        .taskType {
+            height: 30px;
+            border-radius: 10px;
+            margin-left: -10px;
+            border-color: var(--blue);
         }
         /*========Team HTML*/
         
