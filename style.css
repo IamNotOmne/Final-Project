@@ -30,6 +30,25 @@
             margin-top: 10px;
         }
         
+        #logo-pn a {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .iconlogo2 {
+            width: 70%;
+            height: auto;
+            padding: 10px;
+        }
+        
+        hr {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+        }
+        
         .navigation {
             position: fixed;
             width: 300px;
@@ -163,7 +182,7 @@
             align-items: center;
             padding: 0 10px;
             position: fixed;
-            background: white;
+            background: whitesmoke;
         }
         
         .toggle {
@@ -360,7 +379,7 @@
             display: grid;
             min-height: 500px;
             background: var(--white);
-            padding: 20px;
+            padding: 30px;
             box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);
             border-radius: 20px;
         }
@@ -409,6 +428,12 @@
             margin-top: 10px;
         }
         
+        .details .slider {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
         .details table thead td {
             font-weight: 600;
         }
@@ -438,6 +463,12 @@
             text-align: end;
         }
         /*====Week Task card====*/
+        
+        .slideshadow-container {
+            max-width: 500px;
+            position: relative;
+            margin: auto;
+        }
         
         .tasking h1 {
             display: flex;
@@ -475,7 +506,76 @@
             text-align: justify;
             color: var(--black2);
         }
-        /*=== =====*/
+        /*=== carousel in task card=====*/
+        
+        .slider {
+            padding: 10px 10px 10px 10px;
+            width: 600px;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .slides {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .slides::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        
+        .slides::-webkit-scrollbar-thumb {
+            background: var(--blue);
+            border-radius: 10px;
+        }
+        
+        .slides::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .slides>div {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            width: 580px;
+            height: auto;
+            margin-right: 50px;
+            border-radius: 10px;
+            background: #eee;
+            transform-origin: center center;
+            transform: scale(1);
+            transition: transform 0.5s;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .slider>a {
+            display: inline-flex;
+            width: 1.5rem;
+            height: 1.5rem;
+            color: var(--black1);
+            background: transparent;
+            border: 1px solid var(--blue);
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 0 0.5rem 0;
+            position: relative;
+        }
+        
+        .slider>a:active {
+            top: 1px;
+        }
+        
+        .slider>a:focus {
+            background: var(--blue);
+        }
         
         .status.approved {
             padding: 4px 4px;
