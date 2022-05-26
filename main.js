@@ -44,8 +44,8 @@ var emptyNewRow = "<tr class='trNewRow'>";
 emptyNewRow = emptyNewRow + "    <td class='task-list'>";
 emptyNewRow = emptyNewRow + "        <input type='text' class='taskList' placeholder='Enter Name'/>";
 emptyNewRow = emptyNewRow + "    </td>";
-emptyNewRow = emptyNewRow + "    <td class='task-type'>";
-emptyNewRow = emptyNewRow + "        <input type='text' class='taskType' placeholder='Enter Type'/>";
+emptyNewRow = emptyNewRow + "    <td class='task-team'>";
+emptyNewRow = emptyNewRow + "        <input type='text' class='taskTeam' placeholder='Enter Team'/>";
 emptyNewRow = emptyNewRow + "    </td>";
 emptyNewRow = emptyNewRow + "    <td class='task-status'>";
 emptyNewRow = emptyNewRow + "        <button class='save-btn'> Save</button>";
@@ -71,8 +71,8 @@ $(document).ready(function() {
     $('#taskTable').on('click', '.save-btn', function() {
         const list = $(this).parent().parent().find(".taskList").val();
         $(this).parent().parent().find(".task-list").html("" + list + "");
-        const type = $(this).parent().parent().find(".taskType").val();
-        $(this).parent().parent().find(".task-type").html("" + type);
+        const type = $(this).parent().parent().find(".taskTeam").val();
+        $(this).parent().parent().find(".task-team").html("" + type);
         $(this).parent().parent().find(".task-status").html(rowButtons);
     });
     $('#taskTable').on('click', '.cancel-btn', function() { // registering function for delete button  
@@ -89,7 +89,7 @@ $(document).ready(function() {
         $(this).parent().parent().find(".task-list").html("<input type='text' value='" + list + "' class='taskList' placeholder='Enter Task'/>");
 
         const type = $(this).parent().parent().find(".task-type").html();
-        $(this).parent().parent().find(".task-type").html("<input type='text' value='" + type + "' class='taskType' placeholder='Enter Type'/>");
+        $(this).parent().parent().find(".task-team").html("<input type='text' value='" + type + "' class='taskTeam' placeholder='Enter Team'/>");
 
         $(this).parent().parent().find(".task-status").html(rowUpdateButtons);
     });
