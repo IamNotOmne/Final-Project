@@ -94,3 +94,12 @@ $(document).ready(function() {
         $(this).parent().parent().find(".task-status").html(rowUpdateButtons);
     });
 });
+
+$(document).ready(function() {
+    $(document).on('click', '.status.approved', function() {
+        $("#app_omne").html('&#10004; Omne Jean C. Pelingon is Approved');
+    });
+    $(document).on('click', '.status.denied', function() {
+        $("#den_jeane").html('&#10060; Jeane Cardiente is Denied');
+    });
+});
