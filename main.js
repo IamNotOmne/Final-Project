@@ -42,14 +42,17 @@ function menuToggle() {
 var emptyRow = "<tr><td  class='newTable'> No Records Available</td></tr>";
 var emptyNewRow = "<tr class='trNewRow'>";
 emptyNewRow = emptyNewRow + "    <td class='task-list'>";
-emptyNewRow = emptyNewRow + "        <input type='text' class='taskList' placeholder='Enter Name'/>";
+emptyNewRow = emptyNewRow + "        <input type='text' class='taskList' placeholder=' Enter Name'/>";
 emptyNewRow = emptyNewRow + "    </td>";
 emptyNewRow = emptyNewRow + "    <td class='task-team'>";
-emptyNewRow = emptyNewRow + "        <input type='text' class='taskTeam' placeholder='Enter Team'/>";
+emptyNewRow = emptyNewRow + "        <input type='text' class='taskTeam' placeholder=' Enter Team'/>";
+emptyNewRow = emptyNewRow + "    </td>";
+emptyNewRow = emptyNewRow + "    <td class='task-type'>";
+emptyNewRow = emptyNewRow + "        <input type='text' class='taskType' placeholder=' Enter Type'/>";
 emptyNewRow = emptyNewRow + "    </td>";
 emptyNewRow = emptyNewRow + "    <td class='task-status'>";
-emptyNewRow = emptyNewRow + "        <button class='save-btn'> Save</button>";
-emptyNewRow = emptyNewRow + "        <button class='cancel-btn'> Cancel</button>";
+emptyNewRow = emptyNewRow + "        <button class='save-btn'>&#10004</button>";
+emptyNewRow = emptyNewRow + "        <button class='cancel-btn'>&#10060</button>";
 emptyNewRow = emptyNewRow + "    </td>";
 emptyNewRow = emptyNewRow + "</tr>";
 
@@ -71,9 +74,15 @@ $(document).ready(function() {
     $('#taskTable').on('click', '.save-btn', function() {
         const list = $(this).parent().parent().find(".taskList").val();
         $(this).parent().parent().find(".task-list").html("" + list + "");
-        const type = $(this).parent().parent().find(".taskTeam").val();
-        $(this).parent().parent().find(".task-team").html("" + type);
+
+        const team = $(this).parent().parent().find(".taskTeam").val();
+        $(this).parent().parent().find(".task-team").html("" + team);
+
+        const type = $(this).parent().parent().find(".taskType").val();
+        $(this).parent().parent().find(".task-type").html("" + type);
+
         $(this).parent().parent().find(".task-status").html(rowButtons);
+
     });
     $('#taskTable').on('click', '.cancel-btn', function() { // registering function for delete button  
         $(this).parent().parent().remove();
@@ -88,8 +97,11 @@ $(document).ready(function() {
         const list = $(this).parent().parent().find(".task-list").html();
         $(this).parent().parent().find(".task-list").html("<input type='text' value='" + list + "' class='taskList' placeholder='Enter Task'/>");
 
+        const team = $(this).parent().parent().find(".task-team").html();
+        $(this).parent().parent().find(".task-team").html("<input type='text' value='" + team + "' class='taskTeam' placeholder='Enter Team'/>");
+
         const type = $(this).parent().parent().find(".task-type").html();
-        $(this).parent().parent().find(".task-team").html("<input type='text' value='" + type + "' class='taskTeam' placeholder='Enter Team'/>");
+        $(this).parent().parent().find(".task-type").html("<input type='text' value='" + type + "' class='taskType' placeholder='Enter Type'/>");
 
         $(this).parent().parent().find(".task-status").html(rowUpdateButtons);
     });

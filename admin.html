@@ -103,7 +103,7 @@
                             <div class="cardName">Notifications</div>
                         </div>
                         <div class="iconBx">
-                            <ion-icon name="people-circle-outline"></ion-icon>
+                            <ion-icon name="notifications-outline"></ion-icon>
                         </div>
                     </div>
                 </div>
@@ -148,9 +148,8 @@
                     <div class="bigBox">
                         <div class="scroll-div">
                             <div class="cardHeader">
-                                <h2>Recent Notifications</h2>
+                                <h2>Approvals</h2>
                             </div>
-
                             <table>
                                 <thead>
                                     <tr>
@@ -172,7 +171,7 @@
                                     </tr>
                                     <tr id="den_jeane">
                                         <td>Jeane Cardiente</td>
-                                        <td>Class 2023</td>
+                                        <td>Class 2019</td>
                                         <td>Girl</td>
                                         <td>
                                             <button class="status approved">Approve</button>
@@ -271,13 +270,67 @@
                                     </tr>
                                 </tbody>
                             </table>
+
                         </div>
                     </div>
                     <!--New Scholars-->
                     <div class="smallBox">
-                        <div class="cardHeader">
-                            <h2>Admin Approved</h2>
+                        <div class="scroll-div">
+                            <div class="cardHeader">
+                                <h2>Notifications</h2>
+                            </div>
+                            <table class="notiftable">
+                                <tbody>
+                                    <tr>
+                                        <td id="notifs">
+                                            <span class="material-symbols-outlined" id="nf_icon">notification_important</span>
+                                            <h5>Admin Mark Updated the Teams </h5>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="notifs">
+                                            <span class="material-symbols-outlined" id="nf_icon">mark_chat_unread</span>
+                                            <h5>Jeah Marie send you a message..</h5>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="notifs">
+                                            <span class="material-symbols-outlined" id="nf_icon">error</span>
+                                            <h5>Admin Mark Updated the Teams </h5>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="notifs">
+                                            <span class="material-symbols-outlined" id="nf_icon">mark_chat_unread</span>
+                                            <h5>Jamaila send you a message..</h5>
+                                        </td>
+                                    </tr>
+
+                                    <td id="notifs">
+                                        <span class="material-symbols-outlined" id="nf_icon">campaign</span>
+                                        <h5>Leah mentioned you in the Group</h5>
+                                    </td>
+                                    <td id="notifs">
+                                        <span class="material-symbols-outlined" id="nf_icon">error</span>
+                                        <h5>Time to Change the Taskings</h5>
+                                    </td>
+                                    <td id="notifs">
+                                        <span class="material-symbols-outlined" id="nf_icon">notification_important</span>
+                                        <h5>Admin Omne Updated the Task Breakers </h5>
+                                    </td>
+                                    <td id="notifs">
+                                        <span class="material-symbols-outlined" id="nf_icon">error</span>
+                                        <h5>Admin Leah Updated the Consequences </h5>
+                                    </td>
+                                    <td id="notifs">
+                                        <span class="material-symbols-outlined" id="nf_icon">error</span>
+                                        <h5>Admin Mark Updated the Teams </h5>
+                                    </td>
+
+                                </tbody>
+                            </table>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -483,6 +536,7 @@
                                         <tr>
                                             <th>Lists of Students</th>
                                             <th>Team</th>
+                                            <th>Type</th>
                                             <th class="task-status">Status</th>
                                         </tr>
                                     </thead>
@@ -494,8 +548,50 @@
                     </div>
                     <div class="smallBox">
                         <div class="cardHeader">
-                            <h2>Consequence</h2>
+                            <h2>Consequence Type</h2>
                         </div>
+                        <section class="cons">
+                            <div class="conbox-st">
+                                <div id="con1">
+                                    <h4>STANDARD</h4>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <span class="con_icon material-symbols-outlined">arrow_forward</span> Double tasking for two weeks.</li>
+                                        <li><span class="con_icon material-symbols-outlined">arrow_forward</span>500 words Relection Paper.</li>
+                                        <li><span class="con_icon material-symbols-outlined">arrow_forward</span>No cellphones for two weeks.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="conbox-hd">
+                                <div id="con2">
+                                    <h4>HARD</h4>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li><span class="con_icon material-symbols-outlined">arrow_forward</span> One month tasking.</li>
+                                        <li><span class="con_icon material-symbols-outlined">arrow_forward</span>2,000 words Relection Paper.</li>
+                                        <li><span class="con_icon material-symbols-outlined">arrow_forward</span>No cellphones and going out.</li>
+                                        <li><span class="con_icon material-symbols-outlined">arrow_forward</span>Counseling with the educator.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="conbox-trm">
+                                <div id="con3">
+                                    <h4>TERMINATE</h4>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li><span class="con_icon material-symbols-outlined">arrow_forward</span>Automatic Termination</li>
+                                        <li><span class="con_icon material-symbols-outlined">arrow_forward</span> Pay penalties and face strict action.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </section>
+
+
                     </div>
                 </div>
             </div>

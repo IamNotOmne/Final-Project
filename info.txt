@@ -1,1 +1,41 @@
   <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+    <section class="notif">
+                                <div id="nf-1">
+                                    <span class="material-symbols-outlined" id="nf_icon">notification_important</span>
+                                    <h5>Admin Mark Updated the Teams </h5>
+                                </div>
+                                <div id="nf-1">
+                                    <span class="material-symbols-outlined" id="nf_icon">mark_chat_unread</span>
+                                    <h5>Jeah Marie send you a message..</h5>
+                                </div>
+                                <div id="nf-1">
+                                    <span class="material-symbols-outlined" id="nf_icon">campaign</span>
+                                    <h5>Leah mentioned you in the Group</h5>
+                                </div>
+                                <div id="nf-1">
+                                    <span class="material-symbols-outlined" id="nf_icon">error</span>
+                                    <h5>Admin Mark Updated the Teams </h5>
+                                </div>
+                                <div id="nf-1">
+                                    <span class="material-symbols-outlined" id="nf_icon">error</span>
+                                    <h5>Admin Mark Updated the Teams </h5>
+                                </div>
+                                <div id="nf-1">
+                                    <span class="material-symbols-outlined" id="nf_icon">error</span>
+                                    <h5>Admin Mark Updated the Teams </h5>
+                                </div>
+
+                                <div id="nf-1">
+                                    <span class="material-symbols-outlined" id="nf_icon">error</span>
+                                    <h5>Admin Mark Updated the Teams </h5>
+                                </div>
+                                <div id="nf-1">
+                                    <span class="material-symbols-outlined" id="nf_icon">error</span>
+                                    <h5>Admin Mark Updated the Teams </h5>
+                                </div>
+                                <div id="nf-1">
+                                    <span class="material-symbols-outlined" id="nf_icon">error</span>
+                                    <h5>Admin Mark Updated the Teams </h5>
+                                </div>
+                            </section>

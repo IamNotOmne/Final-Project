@@ -6,6 +6,10 @@
                 font-family: 'Ubuntu', sans-serif;
             }
             
+            html {
+                scroll-behavior: smooth;
+            }
+            
              :root {
                 --blue: #287bff;
                 --white: #fff;
@@ -385,7 +389,7 @@
             }
             
             .scroll-div::-webkit-scrollbar {
-                width: 10px;
+                width: 8px;
                 border: 1px solid rgb(200, 200, 200);
             }
             
@@ -452,7 +456,7 @@
             }
             
             .details .bigBox table tr td:last-child {
-                text-align: end;
+                text-align: none;
             }
             
             .details .bigBox table tr td:nth-child(2) {
@@ -461,6 +465,21 @@
             
             .details .bigBox table tr td:nth-child(3) {
                 text-align: end;
+            }
+            /*====Notification Card====*/
+            
+            .notiftable {
+                padding: 10px;
+            }
+            
+            #notifs {
+                display: flex;
+                border-bottom: 1px solid rgba(19, 41, 54, 0.1);
+            }
+            
+            #nf_icon {
+                margin-right: 10px;
+                font-size: 22px;
             }
             /*====Week Task card====*/
             
@@ -642,49 +661,6 @@
                 color: var(--white);
             }
             
-            .container1 {
-                border: 2px solid #dedede;
-                background-color: #f1f1f1;
-                border-radius: 5px;
-                padding: 10px;
-                margin: 10px 0;
-            }
-            
-            .darker1 {
-                border-color: #ccc;
-                background-color: #ddd;
-            }
-            
-            .container1::after {
-                content: "";
-                clear: both;
-                display: table;
-            }
-            
-            .container1 img {
-                float: left;
-                max-width: 60px;
-                width: 100%;
-                margin-right: 20px;
-                border-radius: 50%;
-            }
-            
-            .container1 img.right {
-                float: right;
-                margin-left: 20px;
-                margin-right: 0;
-            }
-            
-            .time-right {
-                float: right;
-                color: #aaa;
-            }
-            
-            .time-left {
-                float: left;
-                color: #999;
-            }
-            
             .tablink {
                 border: none;
                 outline: none;
@@ -765,9 +741,64 @@
                 background-color: #cc0000;
                 color: var(--white);
             }
+            /*=====Consequence Boxes======*/
+            
+            .cons {
+                padding: 15px;
+                display: block;
+            }
+            
+            .cons .con_icon {
+                font-size: 15px;
+            }
+            
+            #con1,
+            #con2,
+            #con3 {
+                display: flex;
+                justify-content: center;
+            }
+            
+            .conbox-st {
+                background: orange;
+                padding: 10px;
+                height: auto;
+            }
+            
+            .conbox-st ul li {
+                list-style-type: outside;
+                margin: 5px;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .conbox-hd {
+                background: orangered;
+                margin-top: 10px;
+                padding: 10px;
+            }
+            
+            .conbox-hd ul li {
+                margin: 5px;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .conbox-trm {
+                background: red;
+                margin-top: 10px;
+                padding: 10px;
+            }
+            
+            .conbox-trm ul li {
+                margin: 5px;
+                display: flex;
+                justify-content: center;
+            }
             
             .taskList {
                 height: 30px;
+                width: 200px;
                 border-radius: 10px;
                 margin-left: -10px;
                 border-color: var(--blue);
@@ -775,11 +806,20 @@
             
             .taskTeam {
                 height: 30px;
+                width: 90px;
                 border-radius: 10px;
-                margin-left: -10px;
+                margin-left: -20px;
                 border-color: var(--blue);
             }
-            /*========Team HTML*/
+            
+            .taskType {
+                height: 30px;
+                width: 90px;
+                border-radius: 10px;
+                margin-left: -60px;
+                border-color: var(--blue);
+            }
+            /*========Team HTML==========*/
             
             .cardBoxes {
                 position: relative;
