@@ -305,7 +305,7 @@
                 padding-left: 15px;
                 text-decoration: none;
                 text-transform: uppercase;
-                transition: 0.5s;
+                transition: 0.2s;
                 z-index: 2;
             }
             
@@ -401,6 +401,7 @@
             .scroll-div {
                 height: 450px;
                 overflow: hidden;
+                overflow-x: auto;
                 overflow-y: scroll;
             }
             
@@ -939,6 +940,27 @@
                 color: rgb(7, 7, 7);
             }
             
+            #new-tasksf {
+                border: none;
+                background: transparent;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                font-size: 13px;
+                box-shadow: 0 0 4px #fff;
+                margin: 15px 0;
+                padding: 0 10px;
+                transition: .4s;
+            }
+            
+            .card:hover {
+                border: none;
+            }
+            
+            #new-tasksf[placeholder]:focus {
+                color: rgb(7, 7, 7);
+            }
+            
             #new-taskICT {
                 border: none;
                 background: transparent;
@@ -1029,7 +1051,7 @@
                 font-size: 13px;
                 box-shadow: 0 0 4px #fff;
                 margin: 15px 0;
-                padding: 0 10px;
+                padding: 0 0px;
                 transition: .4s;
             }
             
@@ -1042,8 +1064,8 @@
             }
             
             #sbtn {
-                padding: 7px 15px;
-                margin-top: 10px;
+                padding: 7px 1px;
+                margin-top: 0px;
                 border-radius: 10px;
                 box-shadow: 0 0 4px rgb(170, 170, 168);
                 cursor: pointer;
@@ -1073,11 +1095,11 @@
             .task .content .text {
                 color: var(--light);
                 font-size: 13px;
-                width: 100%;
+                /* width: 100%; */
                 display: block;
                 transition: 0.4s;
                 border: none;
-                margin-left: 10px;
+                margin-left: -3px;
             }
             
             .task .content .text:not(:read-only) {
@@ -1087,9 +1109,10 @@
             
             .task .actions {
                 display: flex;
-                margin: 0 -0.5rem;
+                margin: 0 -0.1rem;
                 border: none;
-                margin-top: 10px;
+                margin-top: 1px;
+                margin-left: 190px;
             }
             
             .task .actions button {
@@ -1100,7 +1123,7 @@
                 transition: 0.4s;
                 border: none;
                 justify-content: space-between;
-                margin-left: 20px;
+                margin-left: 10px;
             }
             
             .task .actions button:hover {
@@ -1116,11 +1139,30 @@
             .task .actions .edit {
                 background-image: linear-gradient(to right, var(--pink), var(--purple));
                 border: none;
+                right: 30px;
+                margin-top: -15px;
             }
             
             .task .actions .delete {
                 border: none;
-                border-radius: 10px;
+                border-radius: 5px;
+                right: 15px;
+                margin-top: -15px;
+            }
+            
+            .new-taskkitchen {
+                right: 30px;
+                margin-top: -15px;
+            }
+            
+            .new-submit {
+                border-radius: 5px;
+                right: 15px;
+                margin-top: -15px;
+            }
+            
+            #tfsfloor {
+                border: none;
             }
             /*====== About US Page=======*/
             
