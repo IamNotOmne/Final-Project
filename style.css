@@ -401,7 +401,6 @@
             .scroll-div {
                 height: 450px;
                 overflow: hidden;
-                overflow-x: auto;
                 overflow-y: scroll;
             }
             
